@@ -43,9 +43,7 @@
 		<icon src="logo.png" platform="winphone" />
 		<icon src="logo.png" platform="winphone" role="background" />
 
-		<splash src="splash.png" platform="winphone" />
-		<splash platform="winphone" width="1152" height="1920" src="splash.png" />
-		<splash platform="winphone" width="620"  height="300"  src="splash.png" />
+		<splash src="splash.png" />
 	</platform>
 
   <!-- all platforms -->
