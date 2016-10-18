@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=utf-8">
+	<title>Booking</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/kgroca.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="index.css" />
+	<style type="text/css">
+	.ui-page {
+		background: transparent url(images/back.png);
+		width: 100%;
+		background-repeat:repeat !important;
+		background-size:100% 100% !important;
+	
+	}
+	</style>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="js/jquery.validate.js"></script>
+
+<script>
+$.validator.setDefaults({
+submitHandler: function (form) {
+    $.ajax({
+        type: 'POST',
+        url: 'http://www.dotmp3group.co.za/sendBooking.php',
+        data: $(form).serialize(),
+	success: function(){
+	    alert('Your submission was successful');
+            window.location.href = 'index.html';
+	}
+    });
+}
+});
+
+$().ready(function() {
+	// validate the form when it is submitted
+	var validator = $("#form1").validate({
+		errorPlacement: function(error, element) {
+			// Append error within linked label
+			$( element )
+				.closest( "form" )
+					.find( "label[for='" + element.attr( "id" ) + "']" )
+						.append( error );
+		},
+		errorElement: "span",
+		messages: {
+			firstname: {
+				required: " (required)",
+				minlength: " (must be at least 3 characters)"
+			},
+			surname: {
+				required: " (required)",
+				minlength: " (must be at least 3 characters)"
+			},
+			phoneNumber: {
+				required: " (required)",
+				minlength: " (must be 10 numbers in length)",
+				maxlength: " (must be 10 numbers in length)",
+				number: "(this field must be a number)"
+			},
+			email: {
+				required: " (required)",
+				email: "(provide a correct email address)"
+			},
+			eventdate: {
+				required: " (required)",
+				date: "(Please enter a valid date)"
+			},
+			NumOfGuests: {
+				required: " (required)",
+				number: "(this field must be a number)"
+			},
+			addressL1: {
+				required: " (required)",
+				minlength: " (must be 5 numbers in length)"
+			},
+			addressL2: {
+				required: " (required)",
+				minlength: " (must be 5 numbers in length)"
+			},
+			postalcode: {
+				required: " (required)",
+				number: "(this field must be a number)",
+				minlength: " (must be 4 numbers in length)"
+			}
+		}
+	});
+
+	$(".cancel").click(function() {
+		validator.resetForm();
+	});
+});
+</script>
+    
+</head>
+
+<body>
+<!---------------------------------------------Login---------------------------------------------------------------------------------------->
+<div data-role="page" id="bookdate" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Book a Date</h1>
+       <a href="..index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+    	</div>
+    	<div data-role="content">
+		
+		<p> <a href="#popupInfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Learn more">Learn more</a><i><b><u>Help</u></b></i>.</p>
+		<div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;">	
+			<a href="#close" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">clos</a>
+			<center><p><u><b>Complete your booking in 3 simple steps</b></u></p></center>
+			
+					<div class="responsive">
+					  <div class="img">
+						<a target="_blank" href="images/step1.png">
+						  <img src="images/step1.png" alt="Trolltunga Norway" width="1300" height="1200">
+						</a>
+						<a href="#price" ><div class="desc" ><button>Price</button></div></a>
+					  </div>
+					</div>
+
+					<div class="responsive">
+					  <div class="img">
+						<a target="_blank" href="images/step2.png">
+						  <img src="images/step2.png" alt="Forest" width="1600" height="1400">
+						</a>
+					  </div>
+					</div>
+
+					<div class="responsive">
+					  <div class="img">
+						<a target="_blank" href="images/step3.png">
+						  <img src="images/step3.png" alt="Northern Lights" width="600" height="400">
+						</a>
+						<a href="#booking" data-transition="slidefade"><div class="desc" ><button>Booking</button></div></a>
+					  </div>
+					</div>
+
+					<div class="responsive">
+					  <div class="img">
+						<a target="_blank" href="images/step3.1.png">
+						  <img src="images/step3.1.png" alt="Mountains" width="600" height="400">
+						</a>
+						
+					  </div>
+					</div>
+
+					</div>
+		<div>
+		<fieldset>
+			<form method="post" class="cmxform" id="form1" action="">
+				<label for="firstname">Firstname:</label>
+					<input name="firstname" id="firstname" value="" type="text" minlength="3" required>
+				<label for="surname">Surname:</label>
+					<input name="surname" id="surname" value="" type="text" minlength="3" required>
+				<label for="phoneNumber">Phone Number:</label>
+					<input name="phoneNumber" id="phoneNumber" maxlength="10" minlength="10" value="" type="tel" required number="true">
+				<label for="email">Email:</label>
+					<input name="email" id="email" value="" type="text" required email="true">
+				<label for="pack">Package</label>
+					<select name="pack" id="pack">
+    						<option value="Bronze">Special price 1 for 20 people (basic)</option>
+   						<option value="Silver">Special price for 40 people (Pro)</option>
+    						<option value="Gold">Luxury Sweet view for 150 people (Premium)</option>
+    						<option value="Platinum">Classic Style 300 for people (gold)</option>
+					</select>
+				<label for="eventdate">Event Date:</label>
+				<input name="eventdate" id="eventdate" value="yyyy-mm-dd" type="text" required date="true">
+				<label for="NumOfGuests">Number of Guests:</label>
+				<input name="NumOfGuests" id="NumOfGuests" value="" type="text" required number="true">
+				<label for="addressL1">Address Line 1:</label>
+				<input name="addressL1" id="addressL1" value="" type="text" minlength="5" required>
+				<label for="addressL2">Address Line 2:</label>
+				<input name="addressL2" id="addressL2" value="" type="text" minlength="5" required>
+				<label for="postalcode">Postal Code:</label>
+				<input name="postalcode" id="postalcode" value="" type="text" minlength="4" required number="true"><br />
+				<input type="submit" name="submit" id="submit" value="Submit" class="ui-btn ui-corner-all" data-theme="a">
+			</form>
+		</fieldset>
+		</div>
+	</div>
+	
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
+				<li><a href="index.nemu" data-transition="slideup" data-icon="grid"
+				class="ui-btn-active"></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

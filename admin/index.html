@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=utf-8">
+	<title>Events & Decor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/kgroca.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<style type="text/css">
+	.ui-page {
+		background: transparent url(../images/back.png);
+		width: 100%;
+		background-repeat:repeat !important;
+		background-size:100% 100% !important;
+	
+	}
+	</style>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+
+<body>
+
+<!------------------------------------------Bookings--------------------------------------------------------------------------------------------->
+<div data-role="page" id="bookings" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Admin Panel</h1>
+        	<div data-role="navbar">
+        		<ul>
+            			<li><a href="#bookings" target="_parent">Bookings</a></li>
+            			<li><a href="#contacts" target="_parent">Messages</a></li>
+            		</ul>
+        	</div>
+    	</div>
+    	<div data-role="content">
+
+			<div id="show">
+				
+			</div>
+
+		<script type="text/javascript">
+			$().ready(function() {
+				setInterval(function () {
+					$('#show').load('http://www.dotmp3group.co.za/admin/viewBookings.php');
+				}, 3000);
+			});
+		</script>	
+	</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="../index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="../index.html#menu" data-transition="slideup" id="movies" data-icon="grid" class="ui-btn-active" target="_parent"></a></li>
+				<li><a href="../index.html#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------Booking--------------------------------------------------------------------------------------------->
+<div data-role="page" id="booker" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Admin Panel</h1>
+        	<div data-role="navbar">
+        		<ul>
+            			<li><a href="#bookings" target="_parent">Bookings</a></li>
+            			<li><a href="#contacts" target="_parent">Messages</a></li>
+            		</ul>
+        	</div>
+    	</div>
+    	<div data-role="content">
+		<!-- DATA FOR THE CONTENT TAG -->	
+	</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="../index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="../index.html#menu" data-transition="slideup" id="movies" data-icon="grid" class="ui-btn-active" target="_parent"></a></li>
+				<li><a href="../index.html#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!---------------------------------------------Contacts--------------------------------------------------------------------------------------------->
+<div data-role="page" id="contacts" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Admin Panel</h1>
+        	<div data-role="navbar">
+        		<ul>
+            			<li><a href="#bookings" target="_parent">Bookings</a></li>
+            			<li><a href="#contacts" target="_parent">Messages</a></li>
+            		</ul>
+        	</div>
+    	</div>
+    	<div data-role="content">
+
+
+			<div id="shwcontact">
+				
+			</div>
+
+		<script type="text/javascript">
+			$().ready(function() {
+				setInterval(function () {
+					$('#shwcontact').load('http://www.dotmp3group.co.za/admin/viewContacts.php');
+				}, 3000);
+			});
+		</script>	
+	</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="../index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="../index.html#menu" data-transition="slideup" id="movies" data-icon="grid" class="ui-btn-active" target="_parent"></a></li>
+				<li><a href="../index.html#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------getBooking Admin--------------------------------------------------------------------------------------------
+<div data-role="page" id="getcontacts" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Admin Panel</h1>
+        	<div data-role="navbar">
+        		<ul>
+            			<li><a href="#bookings" target="_parent">Bookings</a></li>
+            			<li><a href="#contacts" target="_parent">Messages</a></li>
+            		</ul>
+        	</div>
+    	</div>
+    	<div data-role="content">
+			<div id="showcontact">
+				
+			</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setInterval(function () {
+				var id = getUrlVars()["id"];
+					$('#showcontact').load('http://www.dotmp3group.co.za/admin/contact.php?id='+id);
+				}, 3000);
+			});
+		</script>	
+	</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="../index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="../index.html#menu" data-transition="slideup" id="movies" data-icon="grid" class="ui-btn-active" target="_parent"></a></li>
+				<li><a href="../index.html#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script src="../js/booking.js"></script>
+
+</body>
+</html>

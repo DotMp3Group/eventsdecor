@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=utf-8">
+	<title>Admin Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/kgroca.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../js/jquery-1.11.2.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.js"></script>
+	<script src="../js/jquery.validate.js"></script>
+<style>
+	.ui-page {
+		background: transparent url(../images/back.png);
+		width: 100%;
+		background-repeat:repeat !important;
+		background-size:100% 100% !important;
+	
+	}
+.cmxform fieldset p label span.error { color: red; }
+form.cmxform { width: 100%; }
+form.cmxform label {
+	width: auto;
+	display: block;
+	float: none;
+}
+</style>
+
+<script>
+$.validator.setDefaults({
+submitHandler: function (form) {
+    $.ajax({
+        type: 'POST',
+        url: 'http://www.dotmp3group.co.za/admin/login.php',
+        data: $(form).serialize(),
+	success: function(){
+            window.location.href = 'index.html';
+	}
+    });
+}
+});
+
+$().ready(function() {
+	// validate the form when it is submitted
+	var validator = $("#form1").validate({
+		errorPlacement: function(error, element) {
+			// Append error within linked label
+			$( element )
+				.closest( "form" )
+					.find( "label[for='" + element.attr( "id" ) + "']" )
+						.append( error );
+		},
+		errorElement: "span",
+		messages: {
+			user: {
+				required: " (required)",
+				minlength: " (must be at least 3 characters)"
+			},
+			password: {
+				required: " (required)",
+				minlength: " (password must be at least 6 characters in length)"
+			}
+		}
+	});
+
+	$(".cancel").click(function() {
+		validator.resetForm();
+	});
+});
+</script>
+    
+</head>
+
+<body>
+<!---------------------------------------------Login---------------------------------------------------------------------------------------->
+<div data-role="page" id="login" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Admin Login</h1>
+		<a href="..index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+    	</div>
+    	<div data-role="content">
+		<div>
+
+			<form method="get" class="cmxform" id="form1" action="">
+				<fieldset>
+					<legend>Login Form</legend>
+					<p>
+						<label for="user">Username</label>
+						<input id="user" name="user" required minlength="3">
+					</p>
+					<p>
+						<label for="password">Password</label>
+						<input id="password" type="password" minlength="6" name="password" required>
+					</p>
+					<p>
+						<input class="submit" type="submit" value="Login">
+					</p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+		<div data-role="footer" data-position="fixed" >
+		 <h4>Copyright &copy kg-roca 2016</h4>
+	</div><!-- /footer -->
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

@@ -24,7 +24,7 @@ button,
 .ui-btn {
 	font-size: 1em;
 	line-height: 1.3;
-	   font-family: sans-serif /*{global-font-family}*/;
+	 font-family: sans-serif /*{global-font-family}*/;
 }
 legend,
 .ui-input-text input,
@@ -224,8 +224,8 @@ html .ui-alt-icon .ui-radio-off:after {
 html .ui-bar-a .ui-bar-inherit,
 html .ui-body-a .ui-bar-inherit,
 html body .ui-group-theme-a .ui-bar-inherit {
-	background-color: #9b1f23 /*{a-bar-background-color}*/;
-	border-color: #d92b31 /*{a-bar-border}*/;
+	background-color: #b80f14 /*{a-bar-background-color}*/;
+	border-color: #FF151c /*{a-bar-border}*/;
 	color: #ffffff /*{a-bar-color}*/;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444444 /*{a-bar-shadow-color}*/;
 	font-weight: bold;
@@ -238,10 +238,10 @@ html body .ui-group-theme-a .ui-bar-inherit {
 .ui-overlay-a,
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper {
-	background-color: #d47c19 /*{a-page-background-color}*/;
-	border-color: #d47c19 /*{a-page-border}*/;
-	color: #ffffff /*{a-page-color}*/;
-	text-shadow: 0 /*{a-page-shadow-x}*/ 1px /*{a-page-shadow-y}*/ 0 /*{a-page-shadow-radius}*/ #444444 /*{a-page-shadow-color}*/;
+	background-color: #d3d3d3 /*{a-page-background-color}*/;
+	border-color: #d3d3d3 /*{a-page-border}*/;
+	color: #000000 /*{a-page-color}*/;
+	text-shadow: 0 /*{a-page-shadow-x}*/ 1px /*{a-page-shadow-y}*/ 0 /*{a-page-shadow-radius}*/ #eeeeee /*{a-page-shadow-color}*/;
 }
 /* Body: Read-only lists, text inputs, collapsible content */
 .ui-body-a,
@@ -251,13 +251,18 @@ html .ui-body-a .ui-body-inherit,
 html body .ui-group-theme-a .ui-body-inherit,
 html .ui-panel-page-container-a {
 	background-color: #ffffff /*{a-body-background-color}*/;
-	border-color: #dddddd /*{a-body-border}*/;
+	border-color: #cea6a6 /*{a-body-border}*/;
 	color: #333333 /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
 }
 .ui-body-a {
 	border-width: 1px;
 	border-style: solid;
+	background-image: url("images/img05.jpg") !important;
+    background-repeat:repeat-y !important;
+    background-position:center center !important;
+    background-attachment:scroll !important;
+    background-size:100% 100% !important;
 }
 /* Links */
 .ui-page-theme-a a,
@@ -272,6 +277,7 @@ html .ui-bar-a a:visited,
 html .ui-body-a a:visited,
 html body .ui-group-theme-a a:visited {
     color: #3388cc /*{a-link-visited}*/;
+	
 }
 .ui-page-theme-a a:hover,
 html .ui-bar-a a:hover,
@@ -297,8 +303,8 @@ html .ui-bar-a .ui-btn:visited,
 html .ui-body-a .ui-btn:visited,
 html body .ui-group-theme-a .ui-btn:visited,
 html head + body .ui-btn.ui-btn-a:visited {
-	background-color: #671b37 /*{a-bup-background-color}*/;
-	border-color: #90254d /*{a-bup-border}*/;
+	background-color: #676767 /*{a-bup-background-color}*/;
+	border-color: #383838 /*{a-bup-border}*/;
 	color: #ffffff /*{a-bup-color}*/;
 	text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #444444 /*{a-bup-shadow-color}*/;
 }
@@ -308,8 +314,8 @@ html .ui-bar-a .ui-btn:hover,
 html .ui-body-a .ui-btn:hover,
 html body .ui-group-theme-a .ui-btn:hover,
 html head + body .ui-btn.ui-btn-a:hover {
-	background-color: #761f3f /*{a-bhover-background-color}*/;
-	border-color: #a52b58 /*{a-bhover-border}*/;
+	background-color: #b31b19 /*{a-bhover-background-color}*/;
+	border-color: #605c5c /*{a-bhover-border}*/;
 	color: #ffffff /*{a-bhover-color}*/;
 	text-shadow: 0 /*{a-bhover-shadow-x}*/ 1px /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #444444 /*{a-bhover-shadow-color}*/;
 }
@@ -319,8 +325,8 @@ html .ui-bar-a .ui-btn:active,
 html .ui-body-a .ui-btn:active,
 html body .ui-group-theme-a .ui-btn:active,
 html head + body .ui-btn.ui-btn-a:active {
-	background-color: #761f3f /*{a-bdown-background-color}*/;
-	border-color: #a52b58 /*{a-bdown-border}*/;
+	background-color: #767676 /*{a-bdown-background-color}*/;
+	border-color: #404040 /*{a-bdown-border}*/;
 	color: #ffffff /*{a-bdown-color}*/;
 	text-shadow: 0 /*{a-bdown-shadow-x}*/ 1px /*{a-bdown-shadow-y}*/ 0 /*{a-bdown-shadow-radius}*/ #444444 /*{a-bdown-shadow-color}*/;
 }

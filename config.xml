@@ -48,7 +48,7 @@
 
   <!-- all platforms -->
   <preference name="phonegap-version" value="cli-6.3.0" />
-  <preference name="orientation" value="portrait" />
+  <preference name="orientation" value="default" />
   <preference name="fullscreen" value="true" />
 
   <!-- iOS only -->

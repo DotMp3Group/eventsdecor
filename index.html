@@ -6,7 +6,19 @@
 	<link rel="stylesheet" href="themes/kgroca.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
-	<link rel="stylesheet" href="index.css" /><!-- 
+	<link rel="stylesheet" href="index.css" />
+	<!--
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Blueprint: Background Slideshow</title>
+	<meta name="description" content="Blueprint: Background Slideshow" />
+	<meta name="keywords" content="blueprint, background image slideshow, fullscreen slideshow, jquery, fullscreen image, web development" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	<!-- 
  	<link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/jgallery.css" /> -->
 <!--     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
@@ -26,9 +38,9 @@
 	
 	<script type="text/javascript">
 		var image1=new Image()
-		image1.src="images/kg.jpg"
+		image1.src="images/img06.jpg"
 		var image2=new Image()
-		image2.src="images/kg1.jpg"
+		image2.src="images/img07.jpg"
 	</script>
 	<!--Slide services -->
 	<script>
@@ -40,20 +52,30 @@
 		document.getElementById("myNav").style.width = "0%";
 		}
 	</script>
+	<style type="text/css">
+	.ui-page {
+		background: transparent url(images/back.png);
+		width: 100%;
+		background-repeat:repeat !important;
+		background-size:100% 100% !important;
+	
+	}
+	</style>
 	
 </head>
+
 <body>
 
-<div data-role="page" data-theme="a">
+<div data-role="page" >
 
 	<div data-role="header">
 		<h1>Events & Decor</h1>
-		<a href="#bars" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all" data-position="left">Notext</a> 
-		<a href="#user" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all">Notext</a>
+		<a href="contactus.html" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all" data-position="left" data-transition="slidefade" target="_parent">Notext</a> 
+		<a href="admin/login.html" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all" data-transition="slidefade" target="_parent">Notext</a>
 	</div><!-- /header -->
 
-	<div role="main" class="ui-content">
-	<center><P>Welcome To KG-Roca Events & Decor</p>
+	<div role="main" class="ui-content" >
+	<center><button>Welcome To Kg Roca Events & Decor</button>
 	
 	</center>
 
@@ -136,16 +158,16 @@
         });
     </script>
 
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: -16px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
+		
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
             <div data-p="144.50" style="display: none;">
                 <img data-u="image" src="images/img01.jpg" />
-            
             </div>
             <div data-p="144.50" style="display: none;">
                 <img data-u="image" src="images/img02.jpg" />
@@ -214,10 +236,10 @@
 		<div data-role="content">
 			<div class="ui-grid-c" style="text-align: center;">
 			
-			<div class="ui-block-a"><a href="#home" data-transition="slidefade"><img src="images/img14.jpg"></a><div id="txt"></div>Home </div>
+			<div class="ui-block-a"><a href="#home" data-transition="slidefade"><img src="images/img14.jpg"></a><div id="txt"></div>Home</div>
 			<div class="ui-block-b"><a href="#service" data-transition="slidefade"><img src="images/img13.jpg"></a><div id="txt"></div>Service</div>
-			<div class="ui-block-d"><a href="#booking" data-transition="slidefade"><img src="images/img2.jpg"></a><div id="txt"></div>Bookings</div>
-			<div class="ui-block-c"><a href="gallery.html" data-transition="slidefade"><img src="images/gallery.jpg"></a><div id="txt"></div>Gallery</div>
+			<div class="ui-block-d"><a href="booking.html" data-transition="slidefade"><img src="images/img2.jpg"></a><div id="txt"></div>Bookings</div>
+			<div class="ui-block-c"><a href="#gallery" data-transition="slidefade"><img src="images/gallery.jpg"></a><div id="txt"></div>Gallery</div>
 			</div>
 		</div> 
 		<div data-role="content">
@@ -233,61 +255,19 @@
 	<div data-role="footer" data-position="fixed" data-theme="a">
 		<div data-role="navbar" class="ui-navbar-custom">
 			<ul>
-			<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-			<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-			class="ui-btn-active"></a></li>
-			<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+			<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+			<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+			></a></li>
+			<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 			</ul>
 		</div>
-	</div><!-- /footer -->
-	
-	<div data-role="panel" id="bars" data-theme="d"> 
-			<ul data-role="listview" data-split-icon="heart"  data-split-theme="d">
-				<article class="topcontent">
-						<header>
-						<center><h3><u>Contact Admin</u></h3></center>
-						</header>	
-						<footer>
-						<p class="post-info"> </p>
-						</footer>
-						<content>
-						<form action="send.php" method="post">
-						<fieldset>				
-						First name:<br>
-						<input type="text" name="firstname" value="">
-						<br>
-						Last name:<br>
-						<input type="text" name="lastname" value="">
-						<br>
-						Cell/Telephone:<br>
-						<input type="text" name="cell/telephone" value="">
-						<br>
-						E-mail:<br>
-						<input type="text" name="cell/telephone" value="">
-										
-						<form action="MAILTO"".com method="post"enctype="text/plain">
-							<br>
-							Comment:<br>
-							<textarea rows="10" cols="20"></textarea>
-							<br>
-							<input type="submit" value="submit"></fieldset> 
-						</form>
-					</content>
-				</article>
-			</ul>
 	</div>
-	<!---user--->
-	<div data-role="panel" id="user" data-position="right" data-display="push" data-theme="d">
-		
-	</div>
-</div><!-- /page -->
-
-<!-- Home -->
+</div>
 
 <div data-role="page" id="home" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>About</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 	
@@ -304,175 +284,200 @@
 					}
 					slideshow()
 				</script>
-				<div data-role="navbar" data-theme="c">
+			<div data-role="navbar" data-theme="c">
 				<ul>
-					<li><a href="#price" data-transition="flip">Price</a></li>
-					<li><a href="#team" data-transition="slidefade">Team</a></li>
-					<li><a href="#decor" data-transition="slidefade">Decor</a></li>
-					<li><a href="#cater" data-transition="slidefade">Cater</a></li>
-					<li><a href="#sound" data-transition="slidefade">Sound</a></li>
+					<li><a href="#us" data-transition="slidefade" target="_parent">US</a></li>
+					<li><a href="#motto" data-transition="slidefade" target="_parent">MOTTO</a></li>
+					<li><a href="#faq" data-transition="slidefade" target="_parent">F A Q</a></li>
+					<li><a href="#tc" data-transition="slidefade" target="_parent">T & Cs</a></li>
+					
 				</ul>
 			</div>
-			<P>KG-ROCA Events & Decor was founded in March 2007 (Name of the founder), Chief Creative Director. 
-			We provide eceptional decorating designs and services Pretoria Tshwane.</p>
-			<p>We offer and deliver peace of mind to each & every one of our clients. Our personal service and attention to detail help make your special event memorable and stress free. 
-			From the pre-planning stages we work with you to ensure that you have the wedding or event of your dreams. We are committed to offering you value, quality, reliability and artful designs to compliment your style.</p>
-			<P>KG-ROCA is looking forward to help you create your dream event. Whether you are hosting a small intimate gathering, a large gala event, or planning the wedding of your dreams, Above & Beyond will help you with every step. 
-			After meeting with Kim & our design team you can’t help but feel revitalized and passionate about your event planning experience!</p>
+			<center><p><b><u>Executive summery</u></b></p></center>
+			<p>KG ROCA EVENTS AND DECOR is a vibrant events planning company established to offer tailer made events solution and service, which assures a grat event or occasion to sophisticated events according toour client needs.</p>
+			<p>Our professional well trained team ensures exceptional service and a dazzling presentation to any event, whether big orsmall every job is treated with art most respect and dedication ensuring a well memorable event.</p>
+			<p>Events like graduations, 21st, private parties, wedding or any importoccasion etc. its important for events like these to b celebrate with simplicity, elegance and class thus making them memorable </p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
 <!-- /page -->
 
+<div data-role="page" id="us" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h3>About US</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+		</div>
+		<div data-role="content" class="ui-content">	
+			<P>1, Punctuality, excellence and hospitality is our first priority.</p>
+			<P>2, We ensure, consitent, polish, immaculate ceremony and serices.</p>
+			<P>3, well trained and experienced stuff to ensure a well executed event.</p>
+			<P>4, We strive to make your day memorable and special, thats because we only offer the bestb services.</p>
+			<P>5, We create the right atmostphere with our wide range of furniture, light, music and decorative design to choose from, that will best suits our clients sspecication or needs.</p>
+			<P>6, We come hours before to prepare and organize your event, from setting up equipment, furniture and decoration.</p>
+			<P>7, We are professional thus ensuring attention to detail to all aspect of yur event.</p>
+			<P>8, Our price are reasonable, but we don`t compromise on service.</p>
+			<P>9, We let you seat back relax and enjoy yourself and focus all your attention to your guests, while we take care of your event..</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+
 <!-- Price -->
 <div data-role="page" id="price" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Pricing</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
-			<a href="#booking" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all" data-transition="slidefade">Notext</a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+			<a href="booking.html" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all" data-transition="slidefade" target="_parent">Notext</a>
 		</div>
 		<div data-role="content" class="ui-content">
+		
 		<center>
 		<p><u>Couches and ottomans to transform your event and make your guests feel very special.</u></p>
 		
 			<div class="columns">
 			  <ul class="price">
-				<li class="header" style="background-color:#b3b6b7">Basic</li>
-				<li class="#"><b>Tent and Lounge Special to sit 20 people - R5,500.</b></li>
-				<li>1 x 6m x 9m Platinum White Stretch Tent</li>
-				<li>The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
-				<li>2 x 2-seater White Couches</li>
-				<li>2 x White Coffee Tables</li>
-				<li>2 x 2-seater White Couches</li>
-				<li>10 x White Single Ottomans</li></li>
-				<li>Package without stretch tent : R4,500</li>
-				<li class="grey"><a href="#booking" class="button" data-transition="slidefade">Order Now</a></li>
+				<li class="header" style="background-color:#b3b6b7"><u>Basic</u></li>
+				<li style="background-color:#b3b6b7" ><b>Tent and Lounge Special to sit 20 people - R5,500.</b></li>
+				<li style="background-color:#b3b6b7">1 x 6m x 9m Platinum White Stretch Tent</li>
+				<li style="background-color:#b3b6b7">The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
+				<li style="background-color:#b3b6b7">2 x 2-seater White Couches</li>	
+				<li style="background-color:#dc0505"><a href="booking.html" class="button" data-transition="slidefade" target="_parent"><button>Order Now</button></a></li>
 			  </ul>
 			</div>
 
 			<div class="columns">
 			  <ul class="price">
-				<li class="header" style="background-color:#a1a5a7">Pro</li>
-				<li class="#">Tent and Lounge Special to sit up to 30 people - R7,500</li>
-				<li>1 x 6m x 9m Platinum White Stretch Tent</li>
-				<li>The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
-				<li>4 x White Coffee Tables </li>
-				<li>4 x White Coffee Tables</li>
-				<li>4 x 3 Seater Ottomans</li>
-				<li>10 x Single Ottomans</li>
-				<li>Package without stretch tent : R6,500</li>
-				<li class="grey"><a href="#booking" class="button" data-transition="slidefade">Order Now</a></li>
+				<li class="header" style="background-color:#a1a5a7"><u>Pro</u></li>
+				<li style="background-color:#a1a5a7">Tent and Lounge Special to sit up to 30 people - R7,500</li>
+				<li style="background-color:#a1a5a7">1 x 6m x 9m Platinum White Stretch Tent</li>
+				<li style="background-color:#a1a5a7">The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
+				<li style="background-color:#a1a5a7">4 x White Coffee Tables </li>
+				
+				<li style="background-color:#dc0505"><a href="booking.html" class="button" data-transition="slidefade" target="_parent"><button>Order Now</button></a></li>
 			  </ul>
 			</div>
 			
 			<div class="columns">
 			  <ul class="price">
-				<li class="header" style="background-color:#808283">Primium</li>
-				<li class="#">Tent and Lounge Special to sit up to 30 people - R7,500</li>
-				<li>1 x 6m x 9m Platinum White Stretch Tent</li>
-				<li>The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
-				<li>4 x White Coffee Tables </li>
-				<li>4 x White Coffee Tables</li>
-				<li>4 x 3 Seater Ottomans</li>
-				<li>10 x Single Ottomans</li>
-				<li>Package without stretch tent : R6,500</li>
-				<li class="grey"><a href="#booking" class="button" data-transition="slidefade">Order Now</a></li>
+				<li class="header" style="background-color:#808281"><u>Primium</u></li>
+				<li class="#" style="background-color:#808283">Tent and Lounge Special to sit up to 30 people - R7,500</li>
+				<li style="background-color:#808283">1 x 6m x 9m Platinum White Stretch Tent</li>
+				<li style="background-color:#808283">The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
+				<li style="background-color:#808283">4 x White Coffee Tables </li>
+				<li style="background-color:#dc0505"><a href="booking.html" class="button" data-transition="slidefade" target="_parent"><button>Order Now</button></a></li>
 			  </ul>
 			</div>
 
 			<div class="columns">
 			  <ul class="price">
 				<li class="header" style="background-color:#606060">Gold</li>
-				<li class="#">Tent and Lounge Special to sit up to 30 people - R7,500</li>
-				<li>1 x 6m x 9m Platinum White Stretch Tent</li>
-				<li>The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
-				<li>4 x White Coffee Tables </li>
-				<li>4 x White Coffee Tables</li>
-				<li>4 x 3 Seater Ottomans</li>
-				<li>10 x Single Ottomans</li>
-				<li>Package without stretch tent : R6,500</li>
-				<li class="grey"><a href="#booking" class="button" data-transition="slidefade">Order Now</a></li>
+				<li style="background-color:#606060">Tent and Lounge Special to sit up to 30 people - R7,500</li>
+				<li style="background-color:#606060">1 x 6m x 9m Platinum White Stretch Tent</li>
+				<li style="background-color:#606060">The 6m x 9m stretch tent can accommodate up to 40 people seated.</li>
+				<li style="background-color:#606060">4 x White Coffee Tables </li>
+				<li style="background-color:#dc0505"><a href="booking.html" class="button" data-transition="slidefade" target="_parent"><button>Order Now</button></a></li>
 			  </ul>
 			</div>
-			</center>
+			
 		</div>
-		
+		</center>
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
-<!-- /page -->
 
-<!-- team -->
-
-<div data-role="page" id="team" data-theme="a">
+<div data-role="page" id="motto" data-theme="a">
 		<div data-role="header" data-position="fixed">
-			<h3>Team</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<h3>Motto</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
+		<img src="images/img05.jpg">
+		<p><b><u>Our Motto</u></b></P>
 		
-		<p>KG-ROCA is the owner and Chief Creative Director, and he cannot wait to meet you! If you are planning a significant celebration in your life, big or small, he can help you translate your vision into a spectacular experience for you and your guests.</P>
+		<p>Simplicity, Elegance and Class.</p>
+		
+		<p><b><u>Our Vision</u></b></P>
+		
+		<p>To be recognizzed as one the best in organizing well excuted and a leader in providing excellent service.</p>
+		
+		<p><b><u>Our Mission</u></b></P>
+		
+		<p>To provide superior service and decorative designs that will satisfy.</p>
+		
+		<p><b><u>Our Onjective</u></b></P>
+		
+		<p>To create special and memorable events to our clients.</p>
+		
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
-<!-- /page -->
 
 <!-- /Decor -->
-<div data-role="page" id="decor" data-theme="a">
+<div data-role="page" id="faq" data-theme="a">
 		<div data-role="header" data-position="fixed">
-			<h3>Decoration</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<h3>Vision</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
-		
+			<p><b><u>Our Vision</u></b></P>
+			
+			<P>To be recognizzed as one the best in organizing well excuted and a leader in providing excellent service.</p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
-<!-- /page -->
 
 <!-- /Cater -->
 <div data-role="page" id="cater" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Catering</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 		
@@ -481,21 +486,20 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
-<!-- /page -->
 
 <!-- /Sound -->
 <div data-role="page" id="sound" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Sound Here</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 		
@@ -504,96 +508,71 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				"></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
-<!-- /page -->
 
 <!-- Service -->
 <div data-role="page" id="service" data-theme="a">
-		<div data-role="header" data-position="fixed">
+		<div data-role="header">
 			<h3>Service</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 			
 
 			<div id="myNav" class="overlay">
 			
-			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="javascript:void(0)" class="closebtn" target="_parent" onclick="closeNav()">&times;</a>
 			  
-			  <br><br><br><br><br>
-			  <marquee  behavior="scroll" direction="down">
-				<div data-role="content">
-					<div class="ui-grid-c" style="text-align: center;">
-					<div class="ui-block-a"><a href="#social" data-transition="slidefade"><img src="images/decor1.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-b"><a href="#feedback" data-transition="slidefade"><img src="images/decor2.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor3.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor4.jpg"></a><div id="txt"></div></div>
-					</div>
-				</div> 
-				<div data-role="content">
-					<div class="ui-grid-c" style="text-align: center;">
-					<div class="ui-block-a"><a href="#social" data-transition="slidefade"><img src="images/decor1.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-b"><a href="#feedback" data-transition="slidefade"><img src="images/decor2.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor3.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor4.jpg"></a><div id="txt"></div></div>
-					</div>
-				</div> 
-				<div data-role="content">
-					<div class="ui-grid-c" style="text-align: center;">
-					<div class="ui-block-a"><a href="#social" data-transition="slidefade"><img src="images/decor1.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-b"><a href="#feedback" data-transition="slidefade"><img src="images/decor2.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor3.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor4.jpg"></a><div id="txt"></div></div>
-					</div>
-				</div>
-				<div data-role="content">
-					<div class="ui-grid-c" style="text-align: center;">
-					<div class="ui-block-a"><a href="#social" data-transition="slidefade"><img src="images/decor1.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-b"><a href="#feedback" data-transition="slidefade"><img src="images/decor2.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor3.jpg"></a><div id="txt"></div></div>
-					<div class="ui-block-d"><a href="#events" data-transition="slidefade"><img src="images/decor4.jpg"></a><div id="txt"></div></div>
-					</div>
-				</div></marquee>
 			</div>
 			
-			<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; </span>
-			Open
-			<P>We specialise in hiring out exclusive white couches, Ottomans, umbrellas and tables to make all your guests feel special and VIP.</p>
-			<p>Our couches,Ottomans and coffee tables are ideal for prestigious events, weddings functions, product launches and exhibitions.</p>
-			<p>We continuously update our range to accommodate modern trends and meet the changing needs of our customers.</p>
-			<p>All our couches and ottomans are as good as new and will definitely transform your event into a spectacle. </p>
-			<p>Convenient full service stretch tent and couch hire in Gauteng - for your convenience, we offer stretch tent hire, outdoor garden patio marquee hire, stage cover hire, wedding tent hire, waterproof tent hire in Gauteng and experienced installation service so you don't have to worry or lift a finger to have one of our stunning stretch tents installed at your next even</p>
+			<p><b><u>Furniture Rentals</u></b></p>
+			<p>We ofer a wide range of stylish and morden furniture for different events occasion that you may require. These include couches, ottomans, bar stools, coffee tables,carpets, chairs layout of the event</p>
+			<p><b><u>Events Planning</u></b></p>
+			<p>Every client is unique soyou as client has the option to choose our event planning splution where we organize and plan everything for you, from venue, Decor, Waitresses,Sound, Djs, Videos, photography and more. yours is to just relax awhile we plan everthing for you.</p>
+			<p><b><u>Design and Decor</u></b></p>
+			<p>KG ROCA offers decorative event layouts and decorative designs to choose from, we turn your vision in to reality as we turn your occasion into a glamorous one, our decor and design entails decorating and design the whole events. we also have perfect and grat packages that well set to meet with your budget.</p>
+			<p><b><u>Sound, Stage and Lighting</u></b></p>
+			<p>We have all you need in one roof to get the job done, offering sound, dj`s and lighting to give your events a spectecular show, with a varierty of lighting and system to choose from, every accasion has its style and taste thats`s why its important for us to guide you through the importance of lighting and sound.</p>
+			<p>Our well trained gj`s are there to offer entertainment and enertain your guest playing all genre of music according to the setup of your accasion thus accommodatig everone.</p>
+			<p><b><u>Video & Photography</u></b></p>
+			<p>Whether you are hosting a small event or a full scale event, it is always important to capture those special moments.we offer different packages to suits your needs and to choose from: Photography, Video shooting,DVD`s,Photo books and more.</p>
+			<p><b><u>Barricade Fences</u></b></p>
+			<p>Safty to any event is important, thats why we offer different type fences such as public guidance system for crowd and uniqueness and your guest safety and security</p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
 <!-- /page -->
 
-<!-- Bookings -->
+<!-- Bookings 
 
 <div data-role="page" id="booking" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Bookings</h3>
 			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
 		</div>
-		<div data-role="content" class="ui-content">	
-		<P><u>Request Quotation</u></p>
+		<div data-role="content" class="ui-content">
+		
+			
+		<br>
+		</div>
+		<P><u></u></p>
 		<article class="topcontent">	
 						<footer>
 						<p class="post-info"> </p>
@@ -660,102 +639,153 @@
 				</ul>
 			</div>
 		</div>
-</div>
-<!-- /page -->
+</div>-->
 
-<!-- Bookings -->
-
-
-
-<!-- Bookings -->
 
 <div data-role="page" id="social" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Social Network</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 			<div data-role="content">
 				<div class="ui-grid-c" style="text-align: center;">
-				<div class="ui-block-a"><a href="#" data-transition="slidefade"><img src="images/img32.jpg"></a><div id="txt"></div>You Tube</div>
-				<div class="ui-block-b"><a href="#" data-transition="slidefade"><img src="images/img111.jpg"></a><div id="txt"></div>Facebook</div>
-				<div class="ui-block-d"><a href="#" data-transition="slidefade"><img src="images/img115.jpg"></a><div id="txt"></div>Whats`App</div>
-				<div class="ui-block-c"><a href="#" data-transition="slidefade"><img src="images/img33.jpg"></a><div id="txt"></div>Linked In</div>
+				<div class="ui-block-a"><a href="#instagram" data-transition="slidefade" target="_parent"><img src="images/img32.jpg"></a><div id="txt"></div></div>
+				<div class="ui-block-b"><a href="#facebook" data-transition="slidefade" target="_parent"><img src="images/img111.jpg"></a><div id="txt"></div></div>
+				<div class="ui-block-d"><a href="#twitter" data-transition="slidefade" target="_parent"><img src="images/img52.jpg"></a><div id="txt"></div></div>
+				<div class="ui-block-c"><a href="#whatsapp" data-transition="slidefade" target="_parent"><img src="images/img33.jpg"></a><div id="txt"></div></div>
 				</div>
-			</div> 
+			</div>
+			<br>
+			<img src="images/img05.jpg">
 		</div>
 
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
 <!-- /page -->
 
-<!-- Bookings -->
-
-<div data-role="page" id="feedback" data-theme="a">
+<!-- /instagram -->
+<div data-role="page" id="instagram" data-theme="a">
 		<div data-role="header" data-position="fixed">
-			<h3>Testimonials</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<h3>Instagram</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
-		
 		<div data-role="content" class="ui-content">	
-			<div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-collapsed-icon="user" data-expanded-icon="user">
-				<div data-role="collapsible">
-					<h3>Brain (21st Birth Day)</h3>
-					<img src="images/icon.jpg">
-					<p><u>Brain said:</u></p>
-					<P>I would Like to thank you KG-Roca for your decor. This is my best night ever Hooooppy.</p>
-					<img src="images/img05.jpg">
-					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
-				</div>
-				<br>
-				<div data-role="collapsible">
-					<h3>Tumi`s Wedding</h3>
-					<img src="images/icon.jpg">
-					<p><u>Tumelo said:</u></p>
-					<P>You Rock my marriage KG-Roca Events And Decor.</p>
-					<img src="images/img09.jpg">
-					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
-				</div>
-				<br>
-				<div data-role="collapsible">
-					<div data-role="collapsible">
-					<h3>Tumi`s Wedding</h3>
-					<img src="images/icon.jpg">
-					<p><u>Tumelo said:</u></p>
-					<P>You Rock my marriage KG-Roca Events And Decor.</p>
-					<img src="images/img09.jpg">
-					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
-				</div>
-				</div>
-				<br>
-				<div data-role="collapsible">
-					<h3>Kate Chilling</h3>
-				<p>This collapsible also gets the icon from the set.</p>
-				</div>
-				<br>
-				<div data-role="collapsible" data-collapsed-icon="user" data-expanded-icon="delete">
-					<h3>Mpho Lunch</h3>
-				<p>The icons here are applied to this collapsible specifically, thus overriding the set icons.</p>
-				</div>
-			</div>
+			<script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/e4740a0f38d4c1a030082da32cd79ae5a763c12f.html" id="lightwidget_e4740a0f38" name="lightwidget_e4740a0f38"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>	
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!-- /page -->
+
+<!-- facebook -->
+<div data-role="page" id="facebook" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h3>Catering</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+		</div>
+		<div data-role="content" class="ui-content">	
+			<center><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=600&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="600" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></center>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!-- /page -->
+
+<!-- whats App page -->
+<div data-role="page" id="twitter" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h3>Twitter</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+		</div>
+		<div data-role="content" class="ui-content">	
+			<center><a class="twitter-timeline"  href="https://twitter.com/kg_roca" data-widget-id="603178221585231872">Tweets by @kg_roca</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</center>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!-- /page -->
+
+<!-- twitter page -->
+<div data-role="page" id="whatsapp" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h3>Catering</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+		</div>
+		<div data-role="content" class="ui-content">	
+			
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!-- /page -->
+
+<!-- feedback -->
+
+<div data-role="page" id="feedback" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h3>Testimonials</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+		</div>
+		
+		<div data-role="content" class="ui-content">	
+			
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -767,7 +797,7 @@
 <div data-role="page" id="events" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Events</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">
 			
@@ -829,10 +859,10 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -844,25 +874,26 @@
 <div data-role="page" id="contact" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Contact</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 			<P>KG-Roca Events & Decor (Pty) Ltd:</p>
-			<P>Registration Number : 2012/210784/07</P>
+			<P>Registration Number : *********</P>
 			<P>Head Office and Warehouse</P>
-			<P>5321 Section S</P>
+			<P>***********</P>
+			<P>Gauteng</P>
 			<P>Mamelodi</P>
 			<P>West</P>
 			<p>0122</p>
-			<P>Gauteng</P>
+		
 			<br>
 			<b>Note:</b>
 			<p><b><u>To visit the warehouse and view the furniture please book an appointment by phone or email.</b></u></p>
 		
-			<P>Tel:(012)805 6789</p>
-			<P>Mobile : 076 000 1125</p>
-			<p>E-mail : kgroca@event&decor.co.za</p>
-			<p>Website : www.KG-ROCA events and Deco.co.za</p>
+			<P>Tel:(012)771 5815</p>
+			<P>Mobile :072 467 2495</p>
+			<p>E-mail :info@kgroca.com</p>
+			<p>Website :www.kgroca.com</p>
 			<div>
 				<section class="map">
 					<div class="mapWrapper">
@@ -876,10 +907,10 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -891,34 +922,38 @@
 <div data-role="page" id="menu" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Quick Menu</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
-		<div data-role="content" class="ui-content">	
+		<div data-role="content" class="ui-content">
+		
 		<div data-role="content">
 			<div class="ui-grid-c" style="text-align: center;">
-			<div class="ui-block-a"><a href="#contact" data-transition="slidefade"><img src="images/img23.jpg"></a><div id="txt"></div>Contact</div>
-			<div class="ui-block-b"><a href="#tc" data-transition="slidefade"><img src="images/img24.jpg"></a><div id="txt"></div>Terms & Conditions</div>
-			<div class="ui-block-d"><a href="gallery.html" data-transition="slidefade"><img src="images/img25.jpg"></a><div id="txt"></div>Gallery</div>
-			<div class="ui-block-c"><a href="#social" data-transition="slidefade"><img src="images/img26.jpg"></a><div id="txt"></div>Social Network</div>
+			<div class="ui-block-a"><a href="#home" data-transition="slidefade" target="_parent"><img src="images/home.jpg"></a><div id="txt"></div>Home</div>
+			<div class="ui-block-b"><a href="#service" data-transition="slidefade" target="_parent"><img src="images/servicepic.jpg"></a><div id="txt"></div>Service</div>
+			<div class="ui-block-d"><a href="tel:0724677200" data-transition="slidefade" target="_parent"><img src="images/call.jpg"></a><div id="txt"></div>Call Now</div>
+			<div class="ui-block-c"><a href="booking.html" data-transition="slidefade" target="_parent"><img src="images/bookingicon.jpg"></a><div id="txt"></div>Bookings</div>
 			</div>
 		</div> 
+		
 		<div data-role="content">
 			<div class="ui-grid-c" style="text-align: center;">
-			<div class="ui-block-a"><a href="#blog" data-transition="slidefade"><img src="images/img27.jpg"></a><div id="txt"></div>Blog</div>
-			<div class="ui-block-b"><a href="#food" data-transition="slidefade"><img src="images/img28.jpg"></a><div id="txt"></div>Resturant</div>
-			<div class="ui-block-d"><a href="#sponsor" data-transition="slidefade"><img src="images/img29.jpg"></a><div id="txt"></div>Special Thanks</div>
-			<div class="ui-block-c"><a href="#local" data-transition="slidefade"><img src="images/img31.jpg"></a><div id="txt"></div>Top Local DJs</div>
+			<div class="ui-block-a"><a href="#contact" data-transition="slidefade" target="_parent"><img src="images/img23.jpg"></a><div id="txt"></div>Contact</div>
+			<div class="ui-block-b"><a href="#tc" data-transition="slidefade" target="_parent"><img src="images/img24.jpg"></a><div id="txt"></div>T & Cs</div>
+			<div class="ui-block-d"><a href="#faq" data-transition="slidefade" target="_parent"><img src="images/faq.jpg"></a><div id="txt"></div>F A Q</div>
+			<div class="ui-block-c"><a href="#social" data-transition="slidefade" target="_parent"><img src="images/img26.jpg"></a><div id="txt"></div>Social Network</div>
 			</div>
-		</div> 
+		</div>
+		
+		 
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -927,7 +962,7 @@
 <div data-role="page" id="blog" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Whats New</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		
 		<div data-role="content" class="ui-content">
@@ -945,10 +980,10 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -959,14 +994,14 @@
 <div data-role="page" id="food" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Mams Resturants</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 			<br><br>
 			<ul data-role="listview" data-split-icon="heart"  data-split-theme="d">
 				<li>
 				    <a href="#books">
-						<img src="images/images.jpg" name="slideshow" >
+						<img src="images/images.jpg" name="slideshow" target="_parent" >
 						<h3>Jack Budha Resturant</h3>
 							<p><u><b>Tel:</b></u>(012) 805 7890</p>
 							 <p><u><b>Hours:</b></u>Thurs-Sun 09AM:h 02AM</p>
@@ -978,7 +1013,7 @@
 			<ul data-role="listview" data-split-icon="heart"  data-split-theme="d">
 				<li>
 				    <a href="#books">
-						<img src="images/images111.jpg" name="slideshow" >
+						<img src="images/images111.jpg" name="slideshow" target="_parent" >
 						<h3>Thibo`s Cafe</h3>
 							<p><u><b>Name:</b></u>Adeniyi</p>
 							 <p><u><b>Subject:</b></u>English Gr 10</p>
@@ -989,7 +1024,7 @@
 			<br><br>
 			<ul data-role="listview" data-split-icon="heart"  data-split-theme="d">
 				<li>
-				    <a href="#books">
+				    <a href="#books" target="_parent">
 						<img src="images/kg.jpg" name="slideshow" >
 						<h3>Jack Budha Resturant</h3>
 							<p><u><b>Name:</b></u>Adeniyi</p>
@@ -1001,7 +1036,7 @@
 			<br><br>
 			<ul data-role="listview" data-split-icon="heart"  data-split-theme="d">
 				<li>
-				    <a href="#books">
+				    <a href="#books" target="_parent">
 						<img src="images/kg.jpg" name="slideshow" >
 						<h3>Jack Budha Resturant</h3>
 							<p><u><b>Name:</b></u>Adeniyi</p>
@@ -1015,10 +1050,10 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -1029,7 +1064,7 @@
 <div data-role="page" id="sponsor" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Support</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 		<center>Sponsor</center>
@@ -1057,21 +1092,21 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
 </div>
 <!-- /page -->
 
-<!-- Food -->
+<!-- local -->
 <div data-role="page" id="local" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Local DJs</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 			
@@ -1080,10 +1115,10 @@
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -1095,7 +1130,7 @@
 <div data-role="page" id="tc" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h3>Terms & Conditions</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">	
 		<center>TERMS & CONDITIONS OF HIRE
@@ -1119,7 +1154,7 @@
 				<ul>
 				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
 				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
+				></a></li>
 				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
 				</ul>
 			</div>
@@ -1128,105 +1163,521 @@
 
 <!-- /page -->
 
-<!-- Gallery 
-<div data-role="page" id="gallery" data-theme="a">
+<!-- local -->
+<div data-role="page" id="faq" data-theme="a">
 		<div data-role="header" data-position="fixed">
-			<h3>Gallery</h3>
-			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+			<h3>F A Q</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
 		</div>
 		<div data-role="content" class="ui-content">
-		<style>
-			div.img {
-				margin: 5px;
-				border: 1px solid #ccc;
-				float: left;
-				width: 180px;
-			}
-
-			div.img:hover {
-				border: 1px solid #777;
-			}
-
-			div.img img {
-				width: 100%;
-				height: auto;
-			}
-
-			div.desc {
-				padding: 15px;
-				text-align: center;
-			}
-		</style><center>
-			<div class="img">
-				  <a target="_blank" href="images/img02.jpg">
-					<img src="images/img02.jpg" alt="Trolltunga Norway" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
+			<center><p><b><u>Frequently Ask Question</u></b></p></center>
+			<br>
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-collapsed-icon="user" data-expanded-icon="user">
+				<div data-role="collapsible">
+					
+					<h3>How far in advance should I reserve?</h3>
+					<p><u>How far in advance should I reserve?</u></p>
+					<p>Reserving at least two months in advance helps ensure item availability; however, during peak wedding months or for custom orders we recommend at least six months or longer.<p>
 				</div>
-
-				<div class="img">
-				  <a target="_blank" href="images/img03.jpg">
-					<img src="images/img03.jpg" alt="Forest" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
+				
+				<div data-role="collapsible">
+					<h3>What kind of payment is required to make a reservation?</h3>
+					<P><u>What kind of payment is required to make a reservation?</u></p>
+					<p>A 25% deposit is required for in-stock items and a 50% deposit is required for all custom orders.</p>
 				</div>
-
-				<div class="img">
-				  <a target="_blank" href="images/img05.jpg">
-					<img src="images/img05.jpg" alt="Northern Lights" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
+				
+				<div data-role="collapsible">
+					<h3>What if I need to cancel my order?</h3>
+					<p><u>What if I need to cancel my order?</u></p>
+					<p>The deposit for in-stock items may be refunded if the order is canceled three months prior to the event date.</p>
+					<p>Deposits for custom work or items is non-refundable. Non-refundable deposits for non-custom rentals may be applied to other items or an alternate date within one year.</p>
 				</div>
-
-				<div class="img">
-				  <a target="_blank" href="images/img06.jpg">
-					<img src="images/img06.jpg" alt="Mountains" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
-				</div></center>
-				<div class="img">
-				  <a target="_blank" href="images/img02.jpg">
-					<img src="images/img02.jpg" alt="Trolltunga Norway" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
+			
+				<div data-role="collapsible">
+					<h3>How are payments made?</h3>
+					<p><u>How are payments made?</u></p>
+					<p><u>Banking Details</u></p>
+					<p>You will deposit on the following banking details</p>
+					<p>Branch name:Absa</p>
+					<p>Branch code: 012345</p>
+					<p>Bank account:00000000000</p>
 				</div>
-
-				<div class="img">
-				  <a target="_blank" href="images/img03.jpg">
-					<img src="images/img03.jpg" alt="Forest" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
+				<div data-role="collapsible">
+					<h3>Does the delivery fee include set-up?</h3>
+					
+					<p></p>
 				</div>
-
-				<div class="img">
-				  <a target="_blank" href="images/img05.jpg">
-					<img src="images/img05.jpg" alt="Northern Lights" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
+				
+				<div data-role="collapsible">
+					<h3>What if something doesn't work or I don't receive all my equipment?</h3>
+					<img src="images/icon.jpg">
+					<p><u>Tumelo said:</u></p>
+					<P>You Rock my marriage KG-Roca Events And Decor.</p>
+					<img src="images/img09.jpg">
+					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
 				</div>
-
-				<div class="img">
-				  <a target="_blank" href="images/img06.jpg">
-					<img src="images/img06.jpg" alt="Mountains" width="100" height="50">
-				  </a>
-				  <div class="desc">Add a description of the image here</div>
-				</div></center>
+				
+				<div data-role="collapsible">
+				<div data-role="collapsible">
+					<h3>Tumi`s Wedding</h3>
+					<img src="images/icon.jpg">
+					<p><u>Tumelo said:</u></p>
+					<P>You Rock my marriage KG-Roca Events And Decor.</p>
+					<img src="images/img09.jpg">
+					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
+				</div>
+				</div>
+				
+				<div data-role="collapsible">
+					<h3>Kate Chilling</h3>
+				<p>This collapsible also gets the icon from the set.</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>Kate Chilling</h3>
+				<p>This collapsible also gets the icon from the set.</p>
+				</div>
+					<div data-role="collapsible">
+					<h3>Brain (21st Birth Day)</h3>
+					<img src="images/icon.jpg">
+					<p><u>Brain said:</u></p>
+					<P>I would Like to thank you KG-Roca for your decor. This is my best night ever Hooooppy.</p>
+					<img src="images/img05.jpg">
+					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
+				</div>
+				
+				<div data-role="collapsible">
+					<h3>Tumi`s Wedding</h3>
+					<img src="images/icon.jpg">
+					<p><u>Tumelo said:</u></p>
+					<P>You Rock my marriage KG-Roca Events And Decor.</p>
+					<img src="images/img09.jpg">
+					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
+				</div>
+				
+				<div data-role="collapsible">
+				<div data-role="collapsible">
+					<h3>Tumi`s Wedding</h3>
+					<img src="images/icon.jpg">
+					<p><u>Tumelo said:</u></p>
+					<P>You Rock my marriage KG-Roca Events And Decor.</p>
+					<img src="images/img09.jpg">
+					<p>For more photos just<a href="http//:www.pacebook/photos"> Click here</a></p>
+				</div>
+				</div>
+				
+				<div data-role="collapsible">
+					<h3>Kate Chilling</h3>
+				<p>This collapsible also gets the icon from the set.</p>
+				</div>
+				
+				<div data-role="collapsible" data-collapsed-icon="user" data-expanded-icon="delete">
+					<h3>Mpho Lunch</h3>
+				<p>The icons here are applied to this collapsible specifically, thus overriding the set icons.</p>
+				</div>
+			</div>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar" class="ui-navbar-custom">
 				<ul>
-				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext"></a></li>
-				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid"
-				class="ui-btn-active"></a></li>
-				<li><a href="#price" data-transition="slide" data-icon="tag"></a></li>
+				<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+				<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+				></a></li>
+				<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
 				</ul>
 			</div>
-			
 		</div>
-</div>-->
+</div>
 <!-- /page -->
 
+<!-- Gallery-->
+<div data-role="page" id="gallery" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h3>Gallery</h3>
+			<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext" target="_parent"></a>
+		</div>
+		<div data-role="content" class="ui-content">
+		
+			<script>
+
+				jQuery(document).ready(function ($) {
+
+					var nestedSliders = [];
+
+					$.each(["sliderh1_container", "sliderh2_container", "sliderh3_container"], function (index, containerId) {
+						var nestedSliderOptions = {
+							$PauseOnHover: 2,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+							$SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+							$MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+							//$SlideWidth: 200,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+							//$SlideHeight: 150,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+							$SlideSpacing: 3, 					                //[Optional] Space between each slide in pixels, default value is 0
+							$Cols: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+							$ParkingPosition: 0,                              //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+							$UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+
+							$BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+								$Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+								$ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+								$AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+								$Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+								$Rows: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+								$SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+								$SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+								$Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+							}
+						};
+
+						nestedSliders.push(new $JssorSlider$(containerId, nestedSliderOptions));
+					});
+
+					var options = {
+						$AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+						$AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+						$Idle: 2000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+						$PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+						$ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+						$SlideDuration: 300,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+						$MinDragOffsetToSlide: 80,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+						//$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+						//$SlideHeight: 150,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+						$SlideSpacing: 3, 					                //[Optional] Space between each slide in pixels, default value is 0
+						$Cols: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+						$ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+						$UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+						$PlayOrientation: 2,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+						$DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0),
+						
+						$ThumbnailNavigatorOptions: {
+							$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+							$ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+							$ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+							$AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+							$Rows: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+							$SpacingX: 0,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+							$SpacingY: 0,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+							$Cols: 3,                              //[Optional] Number of pieces to display, default value is 1
+							$ParkingPosition: 0,                          //[Optional] The offset position to park thumbnail
+							$Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+							$NoDrag: false                            //[Optional] Disable drag or not, default value is false
+						}
+					};
+
+					var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+					function OnMainSliderPark(currentIndex, fromIndex) {
+						$.each(nestedSliders, function (index, nestedSlider) {
+							nestedSlider.$Pause();
+						});
+
+						setTimeout(function () {
+							nestedSliders[currentIndex].$Play();
+						}, 2000);
+					}
+
+					jssor_slider1.$On($JssorSlider$.$EVT_PARK, OnMainSliderPark);
+					OnMainSliderPark(0, 0);
+
+					//responsive code begin
+					//you can remove responsive code if you don't want the slider scales while window resizing
+					function ScaleSlider() {
+						var bodyWidth = document.body.clientWidth;
+						if (bodyWidth)
+							jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 600));
+						else
+							window.setTimeout(ScaleSlider, 30);
+					}
+					ScaleSlider();
+
+					$(window).bind("load", ScaleSlider);
+					$(window).bind("resize", ScaleSlider);
+					$(window).bind("orientationchange", ScaleSlider);
+					//responsive code end
+				});
+			</script>
+			
+			<!-- sliderh style begin -->
+			<style>
+				/* jssor slider bullet navigator skin 03 css */
+				/*
+				.jssorb03 div           (normal)
+				.jssorb03 div:hover     (normal mouseover)
+				.jssorb03 .av           (active)
+				.jssorb03 .av:hover     (active mouseover)
+				.jssorb03 .dn           (mousedown)
+				*/
+				.jssorb03 {
+					position: absolute;
+				}
+				.jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+					position: absolute;
+					/* size of bullet elment */
+					width: 21px;
+					height: 21px;
+					text-align: center;
+					line-height: 21px;
+					color: white;
+					font-size: 12px;
+					background: url(slider/img/b03.png) no-repeat;
+					overflow: hidden;
+					cursor: pointer;
+				}
+				.jssorb03 div { background-position: -5px -4px; }
+				.jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+				.jssorb03 .av { background-position: -65px -4px; }
+				.jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+			</style>
+			<!-- sliderh style end -->
+
+			<!-- Jssor Slider Begin -->
+			<!-- To move inline styles to css file/block, please specify a class name for each element. -->		
+			<div id="slider1_container" style="position: relative; top: 10px; left: -16px; width: 600px; height: 400px; overflow: hidden; ">
+
+				<!-- Loading Screen -->
+				<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+					<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+						background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+					</div>
+					<div style="position: absolute; display: block; background: url(slider/img/loading.gif) no-repeat center center;
+						top: 0px; left: 0px;width: 100%;height:100%;">
+					</div>
+				</div>
+
+				<!-- Slides Container -->
+				<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+					overflow: hidden;">
+					<div>
+						<div id="sliderh1_container" class="sliderh1" style="position: relative; top: 0px; left: 0px; width: 600px;
+							height: 300px;">
+
+							<!-- Slides Container -->
+							
+							<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+								overflow: hidden;">
+								<div><img u="image" src="images/img01.jpg" /></div>
+								<div><img u="image" src="images/img02.jpg" /></div>
+								<div><img u="image" src="images/img03.jpg" /></div>
+								<div><img u="image" src="images/img04.jpg" /></div>
+								<div><img u="image" src="images/img05.jpg" /></div>
+								<div><img u="image" src="images/img06.jpg" /></div>
+								<div><img u="image" src="images/img07.jpg" /></div>
+							</div>
+							<!--#region Bullet Navigator Skin Begin -->
+							<!-- Help: http://www.jssor.com/tutorial/set-bullet-navigator.html -->
+							<!-- bullet navigator container -->
+							<div u="navigator" class="jssorb03" style="bottom: 10px; right: 10px;">
+								<!-- bullet navigator item prototype -->
+								<div u="prototype"><div u="numbertemplate"></div></div>
+							</div>
+							<!--#endregion Bullet Navigator Skin End -->
+						</div>
+						<div u="thumb">
+							<img src="images/img07.jpg" />
+							<div class="title_back"></div>
+							<div class="title">
+								Wedding
+							</div>
+						</div>
+					</div>
+					<div>
+						<div id="sliderh2_container" class="sliderh2" style="position: relative; top: 0px; left: 0px; width: 600px;
+							height: 300px;">
+
+							<!-- Slides Container -->
+							<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+								overflow: hidden;">
+									<div><img u="image" src="images/img01.jpg" /></div>
+									<div><img u="image" src="images/img02.jpg" /></div>
+									<div><img u="image" src="images/img03.jpg" /></div>
+									<div><img u="image" src="images/img04.jpg" /></div>
+									<div><img u="image" src="images/img05.jpg" /></div>
+									<div><img u="image" src="images/img06.jpg" /></div>
+									<div><img u="image" src="images/img07.jpg" /></div>
+							</div>
+							<!--#region Bullet Navigator Skin Begin -->
+							<!-- Help: http://www.jssor.com/tutorial/set-bullet-navigator.html -->
+							<!-- bullet navigator container -->
+							<div u="navigator" class="jssorb03" style="bottom: 10px; right: 10px;">
+								<!-- bullet navigator item prototype -->
+								<div u="prototype"><div u="numbertemplate"></div></div>
+							</div>
+							<!--#endregion Bullet Navigator Skin End -->
+						</div>
+						060-684-6811
+						
+						<div u="thumb">
+							<img src="images/img05.jpg" />
+							<div class="title_back"></div>
+							<div class="title">
+							   Party
+							</div>
+						</div>
+					</div>
+					<div>
+						<div id="sliderh3_container" class="sliderh3" style="position: relative; top: 0px; left: 0px; width: 600px;
+							height: 300px;">
+
+							<!-- Slides Container -->
+							<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+								overflow: hidden;">
+								<div><img u="image" src="images/img01.jpg" /></div>
+								<div><img u="image" src="images/img02.jpg" /></div>
+								<div><img u="image" src="images/img03.jpg" /></div>
+								<div><img u="image" src="images/img04.jpg" /></div>
+								<div><img u="image" src="images/img05.jpg" /></div>
+								<div><img u="image" src="images/img06.jpg" /></div>
+								<div><img u="image" src="images/img07.jpg" /></div>
+								<div><img u="image" src="images/img01.jpg" /></div>
+								<div><img u="image" src="images/img02.jpg" /></div>
+								<div><img u="image" src="images/img03.jpg" /></div>
+								<div><img u="image" src="images/img04.jpg" /></div>
+								<div><img u="image" src="images/img05.jpg" /></div>
+								<div><img u="image" src="images/img06.jpg" /></div>
+								<div><img u="image" src="images/img07.jpg" /></div>
+							</div>
+							<!--#region Bullet Navigator Skin Begin -->
+							<!-- Help: http://www.jssor.com/tutorial/set-bullet-navigator.html -->
+							<!-- bullet navigator container -->
+							<div u="navigator" class="jssorb03" style="bottom: 10px; right: 10px;">
+								<!-- bullet navigator item prototype -->
+								<div u="prototype"><div u="numbertemplate"></div></div>
+							</div>
+							<!--#endregion Bullet Navigator Skin End -->
+						</div>
+						<div u="thumb">
+							<img src="images/img09.jpg" />
+							<div class="title_back"></div>
+							<div class="title">
+								Out door
+							</div>
+						</div>
+					</div>
+				</div>        <!--#region Thumbnail Navigator Skin Begin -->
+				<!-- Help: http://www.jssor.com/help/thumbnail-navigator.html -->
+				<style>
+					/* jssor slider thumbnail navigator skin 12 css */
+					/*
+					.jssort16 .p            (normal)
+					.jssort16 .p:hover      (normal mouseover)
+					.jssort16 .pav          (active)
+					.jssort16 .pav:hover    (active mouseover)
+					.jssort16 .pdn          (mousedown)
+					*/
+					.jssort16 {
+						position: absolute;
+						/* size of thumbnail navigator container */
+						width: 600px;
+						height: 100px;
+					}
+
+						.jssort16 .p {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 200px;
+							height: 100px;
+						}
+
+						.jssort16 .t {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 200px;
+							height: 100px;
+							border: none;
+						}
+
+						.jssort16 .p img {
+							filter: alpha(opacity=55);
+							opacity: .55;
+							transition: opacity .6s;
+							-moz-transition: opacity .6s;
+							-webkit-transition: opacity .6s;
+							-o-transition: opacity .6s;
+						}
+
+						.jssort16 .pav img, .jssort16 .pav:hover img, .jssort16 .p:hover img {
+							filter: alpha(opacity=100);
+							opacity: 1;
+							transition: none;
+							-moz-transition: none;
+							-webkit-transition: none;
+							-o-transition: none;
+						}
+
+						.jssort16 .pav:hover img, .jssort16 .p:hover img {
+							filter: alpha(opacity=70);
+							opacity: .7;
+						}
+
+						.jssort16 .title, .jssort16 .title_back {
+							position: absolute;
+							top: 70px;
+							left: 0px;
+							width: 200px;
+							height: 30px;
+							line-height: 30px;
+							text-align: center;
+							color: #000;
+							font-size: 20px;
+						}
+
+						.jssort16 .title_back {
+							background-color: #fff;
+							filter: alpha(opacity=50);
+							opacity: .5;
+						}
+
+						.jssort16 .pav .title_back {
+							background-color: #000;
+							filter: alpha(opacity=50);
+							opacity: .5;
+						}
+
+						.jssort16 .pav .title {
+							color: #fff;
+						}
+
+						.jssort16 .p.pav:hover .title_back, .jssort16 .p:hover .title_back {
+							filter: alpha(opacity=40);
+							opacity: .4;
+						}
+
+						.jssort16 .p.pdn img {
+							filter: alpha(opacity=100);
+							opacity: 1;
+						}
+				</style>
+				<!-- thumbnail navigator container -->
+				<div u="thumbnavigator" class="jssort16" style="left: 0px; bottom: 0px;">
+					<!-- Thumbnail Item Skin Begin -->
+					<div u="slides" style="cursor: default;">
+						<div u="prototype" class=p>
+							<div u="thumbnailtemplate" class="t"></div>
+						</div>
+					</div>
+					<!-- Thumbnail Item Skin End -->
+				</div>
+				<!--#endregion Thumbnail Navigator Skin End -->
+
+				<a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+			</div>	
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" class="ui-navbar-custom">
+				<ul>
+					<li><a href="index.html" data-transition="slidedown" data-icon="home" data-iconpos="notext" target="_parent"></a></li>
+					<li><a href="#menu" data-transition="slideup" id="movies" data-icon="grid" target="_parent"
+					></a></li>
+					<li><a href="#price" data-transition="slide" data-icon="tag" target="_parent"></a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!-- /page -->
 
 </body>
 </html>

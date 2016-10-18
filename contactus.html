@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=utf-8">
+	<title>Contact Us</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/kgroca.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="index.css" />
+	<style type="text/css">
+	.ui-page {
+		background: transparent url(images/back.png);
+		width: 100%;
+		background-repeat:repeat !important;
+		background-size:100% 100% !important;
+	
+	}
+	</style>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="js/jquery.validate.js"></script>
+
+<script>
+$.validator.setDefaults({
+submitHandler: function (form) {
+    $.ajax({
+        type: 'POST',
+        url: 'http://www.dotmp3group.co.za/sendContact.php',
+        data: $(form).serialize(),
+	success: function(){
+	    alert('Your submission was successful');
+            window.location.href = 'index.html';
+	}
+    });
+}
+});
+
+$().ready(function() {
+	// validate the form when it is submitted
+	var validator = $("#form1").validate({
+		errorPlacement: function(error, element) {
+			// Append error within linked label
+			$( element )
+				.closest( "form" )
+					.find( "label[for='" + element.attr( "id" ) + "']" )
+						.append( error );
+		},
+		errorElement: "span",
+		messages: {
+			firstname: {
+				required: " (required)",
+				minlength: " (must be at least 3 characters)"
+			},
+			surname: {
+				required: " (required)",
+				minlength: " (must be at least 3 characters)"
+			},
+			phoneNumber: {
+				required: " (required)",
+				minlength: " (must be 10 numbers in length)",
+				maxlength: " (must be 10 numbers in length)",
+				number: "(this field must be a number)"
+			},
+			email: {
+				required: " (required)",
+				email: "(provide a correct email address"
+			},
+			subject: {
+				required: " (required)",
+				minlength: " (must be 5 characters in length)"
+			},
+			message: {
+				required: " (required)",
+				minlength: " (must be 10 characters in length)"
+			}
+		}
+	});
+
+	$(".cancel").click(function() {
+		validator.resetForm();
+	});
+});
+</script>
+    
+</head>
+
+<body>
+<!---------------------------------------------Login---------------------------------------------------------------------------------------->
+<div data-role="page" id="contactusform" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Contact Us</h1>
+		<a href="index.html" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        	
+    	</div>
+    	<div data-role="content">
+		<div>
+		<fieldset>
+			<form method="post" class="cmxform" id="form1" action="">
+					<label for="firstname"><b>Firstname:</b></label>
+					<input name="firstname" id="firstname" value="" type="text" minlength="3" class="required">
+					<label for="surname"><b>Surname:</b></label>
+					<input name="surname" id="surname" value="" type="text" minlength="3" class="required">
+					<label for="phoneNumber"><b>Phone Number:</b></label>
+					<input name="phoneNumber" id="phoneNumber" maxlength="10" minlength="10" value="" type="tel" class="required" number="true">
+					<label for="email"><b>Email:</b></label>
+					<input name="email" id="email" value="" type="text" class="required" email="true">
+					<label for="subject"><b>Subject:</b></label>
+					<input name="subject" id="subject" value="" type="text" minlength="5" class="required">
+					<label for="message"><b>Message:</b></label>
+					<textarea name="message" id="message" value="" minlength="10" cols="40" rows="8" class="required"></textarea><br />
+				<input type="submit" name="submit" id="submit" value="Submit" class="ui-btn ui-corner-all" data-theme="a">
+			</form>
+		</fieldset>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			 <h4>Copyright &copy kg-roca 2016</h4>
+		</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

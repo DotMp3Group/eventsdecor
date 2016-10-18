@@ -205,7 +205,6 @@ a[href="#phone-table-popup"] {
     border-radius: .3125em;
 }
 
-<style>
 body {margin:0;}
 
 .icon-bar {
@@ -231,10 +230,8 @@ body {margin:0;}
 .active {
     background-color: #4CAF50 !important;
 }
-</style>
 
 /*Slide for service*/
-<style>
 	body {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
@@ -289,10 +286,8 @@ body {margin:0;}
 	right: 35px;
 	}
 }
-</style>
 
 /*pricing css*/
-<style>
 * {
     box-sizing: border-box;
 }
@@ -348,9 +343,7 @@ body {margin:0;}
         width: 100%;
     }
 }
-</style>
 /*alert*/
-<style>
 .alert {
     padding: 20px;
     background-color: #f44336;
@@ -378,6 +371,27 @@ body {margin:0;}
 .closebtn:hover {
     color: black;
 }
-</style>
+
+.error {
+   color: #ff0000;
+   font-size: 12px;
+   margin-top: 5px;
+   margin-bottom: 0;
+}
+ 
+.inputTxtError {
+   border: 1px solid #ff0000;
+   color: #0e0e0e;
+}
+
+
+form.cmxform fieldset p label span.error { color: red; }
+form.cmxform { width: 100%; }
+form.cmxform label {
+	width: auto;
+	display: block;
+	float: none;
+	color: black;
+}
 
 
